@@ -1,1 +1,3 @@
-code/tool中的extract_ev.py是metamap的 extraction code，tool_calculate.prf1.py现在是遍历metamap的所有extract，需要改input file才能做其他的任务
+code/original放的是咱们的。
+code/tool中的extract_ev.py是metamap的 extraction code，
+tool_calculate.prf1.py现在是遍历metamap的所有extract，需要改input file才能做其他的任务
