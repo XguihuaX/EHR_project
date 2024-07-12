@@ -1,9 +1,9 @@
 
 
 
-1: use other tools
+**1: use other tools**
 
-  1.1 OPQRST parts
+ ** 1.1 OPQRST parts**
  
   tools(metamap, ctakes, scisapcy) extraction conclusion: not suitable to engage OPQRST extraction tasks
   
