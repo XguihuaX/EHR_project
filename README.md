@@ -1,4 +1,12 @@
+** original 
+ 
 
+
+ name  ｜ Onset | Region | Radiation | Severity | Quality | Provocation | 
+----------|----------|----------|----------|----------|----------|
+precision|0.819|0.341|0.713|0.61|0.476|0.456|
+recall |0.958|0.967|0.864|0.825|0.907|0.837|
+F1-score |0.883|0.504|0.781|0.701|0.624|0.59|
 
 
 **1: use other tools**
@@ -13,10 +21,3 @@
 
   3: Recent studies using MetaMap and cTAKES for extracting information from electronic health records (EHR) have mostly focused on extracting relatively fixed entity types, such as symptoms, to do the classification tasks,  Only a few studies have combined machine learning and other methods into a pipeline to extract more complex information.
 
-
-
- name  ｜ Onset | Region | Radiation | Severity | Quality | Provocation | 
-----------|----------|----------|----------|----------|----------|
-precision|0.819|0.341|0.713|0.61|0.476|0.456|
-recall |0.958|0.967|0.864|0.825|0.907|0.837|
-F1-score |0.883|0.504|0.781|0.701|0.624|0.59|
