@@ -12,9 +12,9 @@ from transformers import LlamaForCausalLM, LlamaTokenizer
 from accelerate import infer_auto_device_map, init_empty_weights
 from accelerate import load_checkpoint_and_dispatch
 from transformers import LlamaModel, LlamaConfig
-from langchain_huggingface import HuggingFacePipeline  # 修改导入路径
-from langchain_core.prompts import PromptTemplate  # 修改导入路径
-from langchain.chains import LLMChain  # 修改导入路径
+from langchain_huggingface import HuggingFacePipeline  
+from langchain_core.prompts import PromptTemplate  
+from langchain.chains import LLMChain  
 from langchain.prompts.few_shot import FewShotPromptTemplate
 from transformers import StoppingCriteria, StoppingCriteriaList
 from transformers import pipeline
