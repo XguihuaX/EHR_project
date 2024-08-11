@@ -1,0 +1,1047 @@
+text,true,pred,rule_llm_annotation,evaluation reasoning,extraction reasoning
+"53-year-old white female with past medical history of coronary artery disease status post stenting, history of mi, type 1 diabetes, presents to the emergency department with complaints of midsternal chest pain side in onset 2 hours prior to arrival to the ed. patient describes aching discomfort in the midsternal region with radiation to left shoulder blade. she reports associated nausea, diaphoresis and one episode of vomiting. patient describes symptoms consistent with her prior heart attack. patient denies associated abdominal pain, no reported fevers or chills. denies headache or neck stiffness. eyes dizziness. denies urinary complaints. patient does report her blood sugars have been elevated recently.",nan,2 hours prior to arrival to the ED,Spurious,,
+this is a 73-year-old male comes in for evaluation of chest pain. he states the chest pain started about 7 or 7:30 this evening was off and on got progressively worse. he took some aspirin is morphine tablet and nitroglycerin at home with some relief of the chest pain but was still having its recall the ambulance committed for evaluation. he also had some mild shortness of breath. denied any nausea or vomiting. denied any diaphoresis. no lightheadedness or dizziness. denies any syncope or presyncope. no other complaints at this time. symptoms are moderate in severity. nothing is made this worse the nitroglycerin aspirated did seem to help somewhat.,nan,several days/hours ago,Spurious,,
+this is an 86-year-old female comes in for evaluation of chest pain. she had a nephrectomy not terribly long ago. it's been following up with her doctor she's been having problems with orthostatic hypotension. she states that she states that she gets up she gets very lightheaded and dizzy. today she started having some chest pain radiating up into her neck and up into both shoulders. she denied any shortness of breath with it and no nausea or vomiting. denied any lightheadedness or dizziness other when she stood up. she had no syncope or presyncope she did have a fall on saturday which she did hit her head. there was no loss of consciousness. she had no other injuries reported from the fall. she comes in for evaluation no other complaints at this time. she has no numbness or weakness of her extremities. symptoms are moderate in severity. nothing is made this better or worse,nan,today,Spurious,,
+this is a 74-year-old female comes in for the evaluation of chest discomfort. she states that her and her husband were working on their boat she bent over to pick something up she developed pain and pressure sensation in the center of her chest radiating up into her neck. this happened about 6 pm this evening. she went home took a shower she said the discomfort and neck went away she did take 4 baby aspirin said she still has kind of a pressure sensation in the center of her chest substernal region. she committed for evaluation denies any lightheadedness or dizziness. she states she just did not feel right. she denies any shortness of breath. no nausea vomiting. no diaphoresis. no other complaints at this time. symptoms are moderate in severity. nothing is made this better or worse.,nan,about 6 pm this evening,Spurious,,
+this is an 82-year-old female known history of hypertension coronary disease presents with a onset of chest pain that started several hours ago. she did receive some aspirin. she states that her chest pain was resolved after one nitroglycerin. they do give her a second one secondary to her blood pressure being over 200 systolic. she presents here now and being chest pain-free. she states it was associated with some mild shortness of breath. she denied any diaphoresis. no nausea vomiting. patient is blind. she denied any syncope or presyncope. she does a mild headache now from the nitroglycerin.she denied any nausea to me. no vomiting. no diaphoresis. symptoms are moderate in severity. nitroglycerin made this better. nothing is made it worse,nan,several hours ago,Spurious,,
+"medications:   per nursing records including amiodarone, diltiazem  allergies: reviewed in medical records",nan,nan,Similar,,
+medications: per nursing records,nan,nan,Similar,,
+"68-year-old female presents today for evaluation with a report of chest pain. patient states that she developed chest pain at 1:30 am this morning. she states the pain is a 9 out of 10 achy pain is located in the center of her chest with radiation to her jaw, back, and left shoulder. she has had shortness of breath and nausea without vomiting. no diaphoresis. no fever or chills. she has had some chronic leg pain. she took advil and one baby aspirin without sniffily can relief. pain is been constant. notably, patient does have cardiac risk factors including hypertension, hyperlipidemia, diabetes. she did have a recent stress test in august that was normal.",9 out of 10,this morning,Similar,"<s>[INST]<<SYS>>
+
+You are a language model that is used for the evaluation of model 
+predictions against the ground truth. I will be providing you with two phrases and your task is to tell me
+if they are semantically similar or not. Please consider the meaning of words, the context in which they appear and any implied
+or explicit relationships between the phrases.
+
+Semantically similar phrases are phrases that describe the same event or action eventhough they dont use the exact same words.
+
+Specifically,
+a) The two phrases mean the same
+b) The common subset of information means the same
+
+Semantically dissimilar phrases are phrases that describe different events, actions, or concepts or if they differ
+significantly in meaning, context or intent. In other words, phrases that express unrelated or contradictory ideas, or 
+that have different connotations are considered semantically dissimilar.  
+
+Specifically,
+a) The two phrases do not mean the same:
+b) The common subset of information does not mean the same: 
+
+<</SYS>>
+
+Now I will provide you with examples and the reasoning steps for semantically similar phrases.
+
+Example1: Ground Truth: '24 hours ago' and Prediction: '1 day ago' 
+
+1) Identify common topic of information: Both phrases are talking about time.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: 24 hours ago 
+    Phrase2:  1 day ago 
+3) Evaluate the similarity of the two phrases: They mean the same as 24 hours ago and 1 day are the same time duration.
+4) Final answer: @Similar@
+
+
+Example2: Ground Truth: 'pain in left arm and shoulder' and Prediction: 'pain in left arm'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+Example3: Ground Truth: 'pain in the left arm and shoulder' and Prediction:  'pain in the left arm and left side of chest'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+
+I will provide you with ground truth and predictions and your task is to tell me if they are 
+'Similar', 'Dissimilar', 'Spurious' or 'Missing'. Answer '@Similar@', '@Dissimilar@', '@Spurious@', '@Missing@'.
+
+Text: Ground Truth: 9 out of 10 
+ Prediction: this morning 
+[/INST]  Sure, I'm ready to help! Based on the information you've provided, here's my evaluation of the ground truth and prediction:
+
+Ground Truth: 9 out of 10
+
+Prediction: this morning
+
+1) Identify common topic of information: Both phrases are talking about time.
+2) Determine the respective piece of information supporting the common topic:
+    Ground Truth: 9 out of 10 (specific time not specified)
+    Prediction: this morning (specific time not specified)
+3) Evaluate the similarity of the two phrases: They do not mean the same as ""9 out of 10"" is a numerical value and ""this morning"" is a time of day.
+4) Final answer: @Dissimilar@
+
+Please let me know if this evaluation is correct or if you need further clarification.",
+"85-year-old female with history of cabg presenting for chest pain. patient states that she has had intermittent chest pressure that does not radiate for the last couple of days. this morning when she was walking into clinic to go to a doctor's appointment she started to develop severe chest pressure along with nausea and diaphoresis. patient states the pain radiates up into the right side of her jaw. denies any vomiting. denies any shortness of breath. denies any recent illness, fevers/chills, cough. patient currently states her chest pressure is improved, it is very mild at this time. denies any lower extremity swelling.",nan,"' tags as requested:
+
+",Spurious,,
+"60 yr old presenting on account of left neck pain that started 3 days ago after lifting sone furniture. pain is noted to be shooting, intermittent, and radiates to the left upper limb with tingling and numbness noted in the left hand. patient also complains of lower midsternal chest pain described as tightening, started about 6 hrs prior to presentation, worsening about 2hrs ago; worse with eating, relieved by taking toms. patient does not have palpitations/nor orthopnea. she has no nausea nor vomitting. she experiences occasional exercise intolerance with dizziness on exertion for the past few weeks and had a pacer put in 2015.",nan,6 hrs prior to presentation,Spurious,,
+"54-year-old male presents for evaluation complaining of chest pain. states that the pain started sometime yesterday. localizes the pain to the right side of his chest with occasional radiation to his right anterior neck. states that the pain is worse with deep breathing, improved with sitting still. he denies any shortness of breath. denies nausea or vomiting. denies fever or chills. no history of similar symptoms. described as a sharpness and pressure, 1 out of 10 intensity. no radiation to the back. has described mild night sweats as well. described a temperature of 99.5 today. patient denies any leg swelling. reports a significant amount of driving last month throughout new england. history is notable for hyperlipidemia and crohn's disease. denies smoking. no history of hypertension, diabetes, family history of cardiac disease or pe.",1 out of 10,',Similar,"<s>[INST]<<SYS>>
+
+You are a language model that is used for the evaluation of model 
+predictions against the ground truth. I will be providing you with two phrases and your task is to tell me
+if they are semantically similar or not. Please consider the meaning of words, the context in which they appear and any implied
+or explicit relationships between the phrases.
+
+Semantically similar phrases are phrases that describe the same event or action eventhough they dont use the exact same words.
+
+Specifically,
+a) The two phrases mean the same
+b) The common subset of information means the same
+
+Semantically dissimilar phrases are phrases that describe different events, actions, or concepts or if they differ
+significantly in meaning, context or intent. In other words, phrases that express unrelated or contradictory ideas, or 
+that have different connotations are considered semantically dissimilar.  
+
+Specifically,
+a) The two phrases do not mean the same:
+b) The common subset of information does not mean the same: 
+
+<</SYS>>
+
+Now I will provide you with examples and the reasoning steps for semantically similar phrases.
+
+Example1: Ground Truth: '24 hours ago' and Prediction: '1 day ago' 
+
+1) Identify common topic of information: Both phrases are talking about time.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: 24 hours ago 
+    Phrase2:  1 day ago 
+3) Evaluate the similarity of the two phrases: They mean the same as 24 hours ago and 1 day are the same time duration.
+4) Final answer: @Similar@
+
+
+Example2: Ground Truth: 'pain in left arm and shoulder' and Prediction: 'pain in left arm'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+Example3: Ground Truth: 'pain in the left arm and shoulder' and Prediction:  'pain in the left arm and left side of chest'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+
+I will provide you with ground truth and predictions and your task is to tell me if they are 
+'Similar', 'Dissimilar', 'Spurious' or 'Missing'. Answer '@Similar@', '@Dissimilar@', '@Spurious@', '@Missing@'.
+
+Text: Ground Truth: 1 out of 10 
+ Prediction: ' 
+[/INST]  Sure, I'm ready to help! Please provide the ground truth and the prediction. I'll evaluate them based on the criteria you've outlined and provide my answer.",
+"94-year-old female with a past medical history significant for stroke was brought to the ed by her daughter because of chest pain. as per daughter, the patient started complaining of chest pain in the morning today, acute in onset, and the left side of the chest below the breast, continuous, radiating to the neck and back, aggravated with movement, no relieving factors. the patient was also complaining of this chest pain yesterday. denies trauma, fall, myocardial infarction in the past, shortness of breath, cough, palpitations.  the patient has a history of stroke which happened last february 2016 with no residual weakness. according to her daughter she also had some trouble with walking.",nan,in the morning today,Spurious,,
+66-year-old black female presents with chest pain which began at 3:40 pm today. she describes a tightness in her chest which goes into her left arm. she also says at times she has pain in her left upper quadrant. she is status post recent stroke. she relates she has had a stent in the past. she denies any shortness of breath or nausea or diaphoresis with the pain in her chest.,nan,today at 3:40 pm,Spurious,,
+"68-year-old black female presents with chest pain. she relates they were driving and their weighted dunkin' donuts when she suddenly felt pressure in her chest which radiated into her arm neck jaw and back. she describes it as a pressure-like sensation, which made her feel diaphoretic and nauseous. she denies any shortness of breath. she has no cardiac history.",nan,when she suddenly felt,Spurious,,
+39-year-old white female presents with chest tightness. she relates that she was initially seen at a medics present was concern for blood clot so they sent her here. she relates she has a history of pulmonary embolus in her family. she has pain in her back at times. she denies any shortness of breath. she's had no syncope. she's had no recent illnesses.,nan,nan,Similar,,
+97-year-old white female presents after an episode of chest pain. the pain was retrosternal and radiated to her left arm. she has some associated nausea and diaphoresis of the time. she arrives here pain-free. she does have a history of cardiac stents. she relates she has not had a recent cardiac catheterization.,nan,several days/hours ago,Spurious,,
+"patient is a 69-year-old female who presents with one day of chest pain. patient has inspirational pleuritic chest pain day. she denies cough or hemoptysis. she does not smoke. she has not had any prolonged period of immobilization or surgeries recently. patient reports that her symptoms were worse this morning. she denies fever or other upper respiratory symptoms. she's not had dizziness or syncope. no history of asthma. patient speaking in complete sentences. no family history of early cardiac death. pain is worse with deep breathing and movement. it is a sharp sensation, no radiation of the pain to her back, no ripping or tearing sensation. she is not sure if anything seems to make it better. she takes a baby aspirin daily.",nan,one day ago,Spurious,,
+past medical/psychiatric history: see  and nurse's notes,nan, ,Similar,,
+"61-year-old white male presents with chest pain, dizziness, and diarrhea. he relates he feels just awful. he gets short of breath with the chest pain at times. he is nauseous at times. he relates he is dizzy. he relates having started with diarrhea which has been present for several days. he denies any hematochezia. denies any vomiting. he denies any fevers.",nan,several days ago,Spurious,,
+67-year-old white female presents with chest discomfort which began this morning. it did radiate to her left arm. the patient had a pressure-like component to it. there is no associated shortness of breath or diaphoresis or nausea. she's had no recent vomiting or diarrhea. she denies any cough cold or flu or fever. he does have a cardiac history including cardiac stents. he is not had any tonic cardiac workup for over a year.,nan,this morning,Spurious,,
+"patient is a 92-year-old female, comes to emergency room after he she feels short of breath, the patient has history of mitral valve disease, exacerbation, cabg, cad , congestive heart failure, hypertension , pulmonary edema ,copd, history of neuropathy, history of diverticulosis. he has increased dyspnea some shortness of breath on ambulation, she denies fever. she is called her pcp and she was instructed to come to the emergency room. son is telling me that every year she gets admitted for something similar last time, she was admitted because she had some sort of infection. she denies fever at this time,syncope or chest pain.  patient is on coumadin",nan, ,Similar,,
+"patient is a 65-year-old comes to emergency room for chest pain. the patient was admitted on to go to the hospital for atrial fibrillation, and a small pericardial effusion. he has been seen by cardiology in the interim. now he is having 24 hours chest pain pressure like on the left side of his chest, she denies fever, denies syncope. he is 4 out of 10 pressure-like. history of hypertension, hypercholesterolemia, prostate cancer",4 out of 10,24 hours ago,Similar,"<s>[INST]<<SYS>>
+
+You are a language model that is used for the evaluation of model 
+predictions against the ground truth. I will be providing you with two phrases and your task is to tell me
+if they are semantically similar or not. Please consider the meaning of words, the context in which they appear and any implied
+or explicit relationships between the phrases.
+
+Semantically similar phrases are phrases that describe the same event or action eventhough they dont use the exact same words.
+
+Specifically,
+a) The two phrases mean the same
+b) The common subset of information means the same
+
+Semantically dissimilar phrases are phrases that describe different events, actions, or concepts or if they differ
+significantly in meaning, context or intent. In other words, phrases that express unrelated or contradictory ideas, or 
+that have different connotations are considered semantically dissimilar.  
+
+Specifically,
+a) The two phrases do not mean the same:
+b) The common subset of information does not mean the same: 
+
+<</SYS>>
+
+Now I will provide you with examples and the reasoning steps for semantically similar phrases.
+
+Example1: Ground Truth: '24 hours ago' and Prediction: '1 day ago' 
+
+1) Identify common topic of information: Both phrases are talking about time.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: 24 hours ago 
+    Phrase2:  1 day ago 
+3) Evaluate the similarity of the two phrases: They mean the same as 24 hours ago and 1 day are the same time duration.
+4) Final answer: @Similar@
+
+
+Example2: Ground Truth: 'pain in left arm and shoulder' and Prediction: 'pain in left arm'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+Example3: Ground Truth: 'pain in the left arm and shoulder' and Prediction:  'pain in the left arm and left side of chest'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+
+I will provide you with ground truth and predictions and your task is to tell me if they are 
+'Similar', 'Dissimilar', 'Spurious' or 'Missing'. Answer '@Similar@', '@Dissimilar@', '@Spurious@', '@Missing@'.
+
+Text: Ground Truth: 4 out of 10 
+ Prediction: 24 hours ago 
+[/INST]  Sure, I'd be happy to help! Based on the information you've provided, I can evaluate the similarity between the ground truth and the prediction.
+
+Ground Truth: 4 out of 10
+Prediction: 24 hours ago
+
+1) Identify common topic of information: Both phrases are talking about time.
+2) Determine the respective piece of information supporting the common topic:
+Ground Truth: 4 out of 10
+Prediction: 24 hours ago
+3) Evaluate the similarity of the two phrases: They mean the same as 4 out of 10 is a time duration, and 24 hours ago is also a time duration.
+4) Final answer: @Similar@
+
+Therefore, the ground truth and the prediction are semantically similar.",
+"47-year-old female with past medical history of asthma is presenting with 2 months of worsening shortness of breath. patient reports that she had a upper respiratory tract infection 1 week ago that further exacerbated her wheezing. she admits to chest tightness midsternal region, nonradiating, worse with ambulation/exertion, at times associated with diaphoresis but no nausea. she works here at upmc presbyterian as a nighttime supervisor and when she sleeps during the daytime she reports waking up numerous times short of breath, coughing, attempt to catch her breath. she denies any history of leg swelling, recent surgeries, long since travel, pillow orthopnea, personal or family history of clots.",nan,2 months ago,Spurious,,
+"patient is a 52-year-old female who presents with a one-day history of 3/10 dull substernal chest tightness without radiation. there are no modifying or alleviating factors. the patient denies shortness of breath, nausea, vomiting, diaphoresis.",3/10,one-day history,Similar,"<s>[INST]<<SYS>>
+
+You are a language model that is used for the evaluation of model 
+predictions against the ground truth. I will be providing you with two phrases and your task is to tell me
+if they are semantically similar or not. Please consider the meaning of words, the context in which they appear and any implied
+or explicit relationships between the phrases.
+
+Semantically similar phrases are phrases that describe the same event or action eventhough they dont use the exact same words.
+
+Specifically,
+a) The two phrases mean the same
+b) The common subset of information means the same
+
+Semantically dissimilar phrases are phrases that describe different events, actions, or concepts or if they differ
+significantly in meaning, context or intent. In other words, phrases that express unrelated or contradictory ideas, or 
+that have different connotations are considered semantically dissimilar.  
+
+Specifically,
+a) The two phrases do not mean the same:
+b) The common subset of information does not mean the same: 
+
+<</SYS>>
+
+Now I will provide you with examples and the reasoning steps for semantically similar phrases.
+
+Example1: Ground Truth: '24 hours ago' and Prediction: '1 day ago' 
+
+1) Identify common topic of information: Both phrases are talking about time.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: 24 hours ago 
+    Phrase2:  1 day ago 
+3) Evaluate the similarity of the two phrases: They mean the same as 24 hours ago and 1 day are the same time duration.
+4) Final answer: @Similar@
+
+
+Example2: Ground Truth: 'pain in left arm and shoulder' and Prediction: 'pain in left arm'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+Example3: Ground Truth: 'pain in the left arm and shoulder' and Prediction:  'pain in the left arm and left side of chest'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+
+I will provide you with ground truth and predictions and your task is to tell me if they are 
+'Similar', 'Dissimilar', 'Spurious' or 'Missing'. Answer '@Similar@', '@Dissimilar@', '@Spurious@', '@Missing@'.
+
+Text: Ground Truth: 3/10 
+ Prediction: one-day history 
+[/INST]  Sure, I'm ready to help! Based on the information you've provided, I can evaluate the similarity between the ground truth and the prediction.
+
+Ground Truth: 3/10
+Prediction: one-day history
+
+1) Identify common topic of information: Both phrases are talking about time.
+2) Determine the respective piece of information supporting the common topic:
+Ground Truth: 3/10 (specific date and time)
+Prediction: one-day history (duration of time)
+3) Evaluate the similarity of the two phrases: They do not mean the same as the ground truth provides a specific date and time, while the prediction only mentions the duration of time.
+4) Final answer: @Dissimilar@",
+"patient is a 75-year-old male who presents with complaints of one week of upper respiratory congestion with moderate cough productive of yellowish to bloody sputum. he reports intermittent 5/10 dull substernal chest pain without radiation. he reports shortness of breath. symptoms are worse with exertion or movement. symptoms are worse with coughing. there are no other modifying or alleviating factors. the patient denies nausea, vomiting, diaphoresis.",5/10,worse with exertion or movement,Similar,"<s>[INST]<<SYS>>
+
+You are a language model that is used for the evaluation of model 
+predictions against the ground truth. I will be providing you with two phrases and your task is to tell me
+if they are semantically similar or not. Please consider the meaning of words, the context in which they appear and any implied
+or explicit relationships between the phrases.
+
+Semantically similar phrases are phrases that describe the same event or action eventhough they dont use the exact same words.
+
+Specifically,
+a) The two phrases mean the same
+b) The common subset of information means the same
+
+Semantically dissimilar phrases are phrases that describe different events, actions, or concepts or if they differ
+significantly in meaning, context or intent. In other words, phrases that express unrelated or contradictory ideas, or 
+that have different connotations are considered semantically dissimilar.  
+
+Specifically,
+a) The two phrases do not mean the same:
+b) The common subset of information does not mean the same: 
+
+<</SYS>>
+
+Now I will provide you with examples and the reasoning steps for semantically similar phrases.
+
+Example1: Ground Truth: '24 hours ago' and Prediction: '1 day ago' 
+
+1) Identify common topic of information: Both phrases are talking about time.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: 24 hours ago 
+    Phrase2:  1 day ago 
+3) Evaluate the similarity of the two phrases: They mean the same as 24 hours ago and 1 day are the same time duration.
+4) Final answer: @Similar@
+
+
+Example2: Ground Truth: 'pain in left arm and shoulder' and Prediction: 'pain in left arm'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+Example3: Ground Truth: 'pain in the left arm and shoulder' and Prediction:  'pain in the left arm and left side of chest'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+
+I will provide you with ground truth and predictions and your task is to tell me if they are 
+'Similar', 'Dissimilar', 'Spurious' or 'Missing'. Answer '@Similar@', '@Dissimilar@', '@Spurious@', '@Missing@'.
+
+Text: Ground Truth: 5/10 
+ Prediction: worse with exertion or movement 
+[/INST]  Sure, I'd be happy to help! Based on the information you've provided, I can evaluate the similarity between the ground truth and the prediction.
+
+Ground Truth: 5/10
+Prediction: worse with exertion or movement
+
+1) Identify common topic of information: Both phrases are talking about the severity of a condition.
+2) Determine the respective piece of information supporting the common topic:
+    Ground Truth: 5/10
+    Prediction: worse with exertion or movement
+3) Evaluate the similarity of the two phrases: While the ground truth and prediction both refer to the severity of a condition, they do not convey the same information. The ground truth provides a specific rating, while the prediction describes the condition worsening with exertion or movement.
+4) Final answer: @Dissimilar@
+
+Therefore, I determine that the ground truth and prediction are dissimilar.",
+"patient is a 67-year-old male with past medical history significant for squamous cell carcinoma involving base of tongue and left carotid artery s/p radiation and chemotherapy. patient presents to the ed today with his wife complaining of shortness of breath, chest tightness and lightheadedness for the past 2 days. patient states that he usually has sob on exertion, however for the past 2-3 days he has developed sob at rest, which is exacerbated on exertion. chest tightness has been present for the past 48 hours. patient describes it as a sensation of fullness in his chest. denies any cough above his usual, which usually occurs during eating. notably patient has a history of recurrent aspiration pneumonia, last cxr was 4 days ago. no increase in purulent expectorations. patient has been feeling occasionally lightheaded over the last 48 hours, episodes are brief and fleeting and have not resulted in loc. patient does have carotid hypersensitivity syndrome causing recurrent syncope due to his cancer involving l carotid artery s/p gamma knife. patient reports marked malaise, lack of energy, lethargy which has resulted in decreased po intake of food/fluids recently. he denies chest pain, palpitations, fever, chills, sweats, dysuria, nvd, abd pain, headaches, focal deficits, myalgias, as arthralgias.",nan,for the past 2 days,Spurious,,
+patient with onset of chest pain this evening while he was at home. rated both shoulders. states she felt lightheaded and dizzy and diaphoretic. mild nausea. no vomiting pain was 7 on the 10 scale. currently the pain has clearly decreased into his 2 on the 10 scale. has never had any pain like this before. did not have any back pain. he states he currently feels short of breath. has not had any wheezing or cough.,7 on the 10 scale,nan,Missing,,
+"patient is a 63 year old male with a pmhx significant for cad, htn, atrial fibrillation, dyslipidemia who presents for evaluation of chest pain. since last pm, patient complains of intermittent chest discomfort that he describes as a midsternal pressure with associated shortness of breath. has had episodes of exertional chest discomfort for the past few years however since last night, episodes occur at rest and last seconds to minutes prior to spontaneously resolving. took an extra aspirin this morning however symptoms persisted, prompting ed visit. admits to dizzy/lightheadedness upon standing that resolves with rest. denies diaphoresis, nausea, vomiting, back pain, fever, chills, uri sx, urinary symptoms, lower extremity edema/pain. no recent travel. follows with dr. minella, cardiology though has not been seen within the past year. currently pain free.",nan,moderate to severe,Spurious,,
+"social history: admits to smoking 8-10 cigarettes per day, denies etoh use, denies illicit drug use",nan,nan,Similar,,
+"social history: admits to smoking, etoh use, denies illicit drug use",nan,""".
+
+So, the entity 'Severity' cannot be extracted from this text because there is no information about the start of the chief complaint.
+
+Here's the final answer:
+
+",Similar,,
+55-year-old male complains of sternal chest pain for a number of hours which is slow in onset is continuous and is moderate. he has a history of chronic recurring chest pain and this pain is identical. he also had some sweating and nausea and mild shortness of breath.,nan,number of hours ago,Spurious,,
+64-year-old male claims pain in the lower sternal region and to the right for 3 days which was slow in onset and is continuous and is moderate. it is not pleuritic. it is worse with exertion. she is also had a mild cough which is nonproductive. she has had some intermittent nausea and/or sweating. she denies fever.,nan,nan,Similar,,
+"patient is a 53yo f with hx of cad s/p pci (des to mid-lad, 11/2017), htn, t2dm, hld who presents with 2 days of sub-sternal chest pressure. pt reports that she has had progressible worse mid-sternal chest pain associated with diaphoresis and worse with exertion over the last 2 days. no n/v, no sob. she reports that she has not been taking her asa 81mg over the last month as she felt it was not important as it was otc but she has been compliant with her clopidogrel, metoprolol, lisinopril, statin, amlodipine. she also reports some increasing lower exteremity edema over the last few days and presyncopal episodes without any loc. on ros, she denies cough, diarrhea/constipation, abdominal pain, changes in vision, dysuria, blood in urine or stool.",nan,2 days ago,Spurious,,
+"patient is a 46yo f with hx of post-partum b/l carotid dissection most likely 2/2 fmd who presents today in the ed with l upper chest pain. pt reports that the pain started 2 weeks ago after 3 nights of recurrent coughing and has persisted since. pt is pleuritic in nature and radiates to her l shoulder, axilla and l upper back. it is alleviated by naproxen. it happens both at rest and exertion. no hx of recent heavy lifting. she reports decreased appetite. no personal hx of clotting or bleeding. she denies fever, chills, no more cough after the coughing spells 2 weeks ago, diaphoresis, n/v, diarrhea, abdominal pain or dysuria/hematuria. she is accompanied by her husband today who helps with history. there was no particular inciting event prompting evaluation today other than the fact that her symptoms persisted.",nan,2 weeks ago,Spurious,,
+"this is a 43 yo caucasian female who presents to the ed complaining of possible sinus infection. she states she has had nasal congestion for the past month or so now but getting worse over the past week. she states that she gets sinusitis very often and therefore she has tried to treated outpatient. she has been trying to use claritin as well as other sinus medications over-the-counter without any relief. she states though however over the past week she has had increased sinus pressure, facial pain, frontal headache. she also reports having a cough and sleep issues breathing. she states she used an inhaler that she was prescribed earlier this year which did help with her breathing and she was able to have a productive cough at this time. she denies any fevers but states she has felt warm. denies chills. patient reports that this week her throat began to hurt but states it only really hurts when she swallows. denies any chest pain, nausea, vomiting, ear pain.",nan,moderate to severe,Spurious,,
+"patient is a 48 yo m w pmh signficant for asthma, dmii, mr requiring upcoming valve repair, crack abuse who presents with 3 days of worsening nasal congestion, cough and chest pain. states these symptoms started 3-4 days ago, says she has mid chest pain, 'like a pressure,' worse with inhaling, and l arm numbness around the biceps. was transferred from outpatient appointment today to puh ed for these reprots of chest pain. has chronic sob 2/2 asthma, worse with her new cough and nasal congestion. also endorses progressive orthopnea. denies new swelling, no history of cad, but does have a history of moderate to severe mitral regurgitation on recent tte. had a stress test in 4/2018 negative for ischemia. her vascular risk factors are smoking, hld, recent cocaine use, h/o diabetes. denies h/o vte",nan,progressive orthopnea,Spurious,,
+"patient is a 54 yo f w/ pmhx significant for copd, obesity who presents with mid chest pressure and pain. two days ago, after eating she noted pressure in her mid chest, with pain rated 3-4/10 that radiated to her l jaw, worse with exertion and movement. denies worsening in her baseline sob. was recently seen for copd exacerbation on 7/2/18, with left sided chest pain, cough and increasing sputum. her ekg at the time was normal. she was treated with azithromycin and a breathing treatment, and since then her cough and sputum have improved. says this chest pain is different than prior. denies h/o cad or cardiac chest pain. smokes 3-4 cigs/d, is not diabetic, no cad in immediate relatives before age 50. denies h/o vte. she recevied asa 324mg en route from ems.",3-4/10,two days ago,Similar,"<s>[INST]<<SYS>>
+
+You are a language model that is used for the evaluation of model 
+predictions against the ground truth. I will be providing you with two phrases and your task is to tell me
+if they are semantically similar or not. Please consider the meaning of words, the context in which they appear and any implied
+or explicit relationships between the phrases.
+
+Semantically similar phrases are phrases that describe the same event or action eventhough they dont use the exact same words.
+
+Specifically,
+a) The two phrases mean the same
+b) The common subset of information means the same
+
+Semantically dissimilar phrases are phrases that describe different events, actions, or concepts or if they differ
+significantly in meaning, context or intent. In other words, phrases that express unrelated or contradictory ideas, or 
+that have different connotations are considered semantically dissimilar.  
+
+Specifically,
+a) The two phrases do not mean the same:
+b) The common subset of information does not mean the same: 
+
+<</SYS>>
+
+Now I will provide you with examples and the reasoning steps for semantically similar phrases.
+
+Example1: Ground Truth: '24 hours ago' and Prediction: '1 day ago' 
+
+1) Identify common topic of information: Both phrases are talking about time.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: 24 hours ago 
+    Phrase2:  1 day ago 
+3) Evaluate the similarity of the two phrases: They mean the same as 24 hours ago and 1 day are the same time duration.
+4) Final answer: @Similar@
+
+
+Example2: Ground Truth: 'pain in left arm and shoulder' and Prediction: 'pain in left arm'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+Example3: Ground Truth: 'pain in the left arm and shoulder' and Prediction:  'pain in the left arm and left side of chest'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+
+I will provide you with ground truth and predictions and your task is to tell me if they are 
+'Similar', 'Dissimilar', 'Spurious' or 'Missing'. Answer '@Similar@', '@Dissimilar@', '@Spurious@', '@Missing@'.
+
+Text: Ground Truth: 3-4/10 
+ Prediction: two days ago 
+[/INST]  Sure, I'd be happy to help! Based on the information you've provided, I can evaluate the similarity between the ground truth and the prediction.
+
+Ground Truth: 3-4/10
+Prediction: two days ago
+
+1. Identify common topic of information: Both phrases are talking about time.
+2. Determine the respective piece of information supporting the common topic:
+	Ground Truth: 3-4/10 (specific time range)
+	Prediction: two days ago (specific time range)
+3. Evaluate the similarity of the two phrases: They mean the same as both phrases mention a specific time range (3-4 days ago).
+
+Therefore, the answer is: @Similar@",
+89-year-old male past history of chf presents to the emergency department with increased oxygen requirement. he was recently admitted to the hospital and discharged to care facility. his family is trying to initiate hospice treatment to try and manage the chf at homes that he does not end up bouncing out of the hospital. they've tried previous doses of 40 mg of lasix which was too much and 20 mg of lasix seems to be too low. the hospice was just started and they've been unable to have the opportunity try and optimize his lasix dose. the patient is not currently on o2 at home but they state that the oxygen was just delivered some uncertain what the orders are for the facility where he is.,nan, ,Similar,,
+68-year-old male presents to the emergency department complaining of an episode of back pain radiating to his left chest wall that began while he was using the computer this morning. it went on for about 30 minutes before he mentioned to his wife because he thought it would go away. initially her while he was taking a deep breath and then that resolved. she called 911 and by the time the paramedics got there he was mostly improved. they did give him one sublingual nitroglycerin but by then the pain was on was gone anyway. his does not currently have any pain.,nan,this morning,Spurious,,
+":   patient is a 82-year-old past medical history of ra, copd, pneumonia, pleural effusions who is currently residing at a nursing facility. patient complains today of right abdominal and chest pain. patient states he has had this pain for over 2 years. patient states it is worse when she is sitting up. states she has no pain when she is lying down. patient is on oxygen through nasal cannula for copd. patient relates that she does have shortness of breath but nothing new. patient states that she has lost 20 pounds over the last 3 months. denies any issues with urination or bowel movements. patient had been admitted for pneumonia january 2018.  denies any nausea, vomiting, fever, chills. denies any other focal neurologic deficits. denies any headache.",nan,for over 2 years,Spurious,,
+"patient is a 57-year-old female past medical history significant for hypertension, hyperlipidemia, and hypothyroidism presenting to the er with chief complaint of midsternal chest discomfort that radiates to her back, right shoulder, and right arm. patient noting that these episodes have been intermittent and she first noticed them starting on wednesday. patient denies any exertional component to the chest pain. patient noted that these episodes had resolved however subsequently her chest pain started this morning when she woke up. patient complaining of some associated nausea but denies any lightheadedness, shortness of breath, or diaphoresis. patient stating that she did take tums again that maybe it was due to heartburn her she stated that that did not help. patient denying any abdominal pain or that certain foods exacerbate the pain. she denies any history of biliary disease. she did state that she has had a previous stress test however it has been many years ago.",nan,starting on wednesday,Spurious,,
+"patient is a 87-year-old male with past medical history significant for insulin-dependent diabetes, a-fin on eliquis, heart failure, aortic valve replacement, gerd, and 2 recent hospitalizations for klebsiella bacteremia most recent hospitalization on 8/27/18 presented to the er with chief complaint of epigastric/mid sternal chest pain hours that has been intermittent. patient denying any associated shortness of breath, nausea, diaphoresis, or radiation of the pain to his jaw, arm, or back. per son he stated that patient did complain of some shortness of breath earlier this morning and stating the patient has been having some bilateral lower extremity swelling which patient states is normal. patient denying any history of blood clots, unilateral leg swelling, hemoptysis, or recent surgery. pt stating that he just started back on his eliquis yesterday and has been taking his diuretic torosemide. pt stating that he is currently on home iv antibiotics through the picc line and that he needs to be on them for approximately 6 weeks to treat his bacteremia. patient denying any recurrent fevers, chills, or weakness. pt stating that his last stress test was many years ago.",nan,approximately 6 weeks,Spurious,,
+"patient is a 76-year-old female with a past medical history significant for hypothyroidism, hypertension, a. fib on sotalol (eloquis held since 10/9/18 for knee replacement on this wed), endometrial cancer s/p hysterectomy, and a recent hospitalization for a. fib with rvr complicated by multiple aicd shocks who is presenting to the er with chief complaint of left-sided chest pain that radiates to her left arm. patient is describing the pain as a dull ache and denies any associated shortness of breath, nausea, vomiting, diaphoresis, exertional pain, hemoptysis or history of venous thromboembolism. patient stating that she was sitting still when the pain started and noted that she has been off of her anticoagulation since 10/9/18 and she is planning for an upcoming knee replacement this wednesday. patient denying any abdominal pain, vomiting, diarrhea, urinary symptoms, numbness, tingling, or any other concerning symptoms.",nan,mild,Spurious,,
+"patient is a 60-year-old male without medical history significant for hypertension, copd, and oa presenting to the er with a chief complaint of intermittent midsternal chest pain that he describes as sharp and a 5 out of 10 in severity associated with some sweating, shortness of breath, and wheezing. patient denies any unilateral leg swelling, history of no thromboembolism, recent surgery/immobilization. patient also complaining of a history of poor dentition and stating he has been unable to have his teeth extracted to insurance issues and did note some increased swelling on the right side of his mouth yesterday and was started on a prescription for amoxicillin to treat a tooth infection. he denies any stiff neck, fever, purulent drainage, or earache. patient stating that he just recently moved to the area and did have a stress test approximately year ago at forbes regional hospital and that it was normal.",5 out of 10,5 out of 10 in severity,Similar,"<s>[INST]<<SYS>>
+
+You are a language model that is used for the evaluation of model 
+predictions against the ground truth. I will be providing you with two phrases and your task is to tell me
+if they are semantically similar or not. Please consider the meaning of words, the context in which they appear and any implied
+or explicit relationships between the phrases.
+
+Semantically similar phrases are phrases that describe the same event or action eventhough they dont use the exact same words.
+
+Specifically,
+a) The two phrases mean the same
+b) The common subset of information means the same
+
+Semantically dissimilar phrases are phrases that describe different events, actions, or concepts or if they differ
+significantly in meaning, context or intent. In other words, phrases that express unrelated or contradictory ideas, or 
+that have different connotations are considered semantically dissimilar.  
+
+Specifically,
+a) The two phrases do not mean the same:
+b) The common subset of information does not mean the same: 
+
+<</SYS>>
+
+Now I will provide you with examples and the reasoning steps for semantically similar phrases.
+
+Example1: Ground Truth: '24 hours ago' and Prediction: '1 day ago' 
+
+1) Identify common topic of information: Both phrases are talking about time.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: 24 hours ago 
+    Phrase2:  1 day ago 
+3) Evaluate the similarity of the two phrases: They mean the same as 24 hours ago and 1 day are the same time duration.
+4) Final answer: @Similar@
+
+
+Example2: Ground Truth: 'pain in left arm and shoulder' and Prediction: 'pain in left arm'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+Example3: Ground Truth: 'pain in the left arm and shoulder' and Prediction:  'pain in the left arm and left side of chest'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+
+I will provide you with ground truth and predictions and your task is to tell me if they are 
+'Similar', 'Dissimilar', 'Spurious' or 'Missing'. Answer '@Similar@', '@Dissimilar@', '@Spurious@', '@Missing@'.
+
+Text: Ground Truth: 5 out of 10 
+ Prediction: 5 out of 10 in severity 
+[/INST]  Sure, I'm ready to help! Based on the examples and reasoning steps you provided, I understand that I need to determine if the ground truth and prediction are semantically similar or not.
+
+For the given ground truth and prediction, I would say that they are semantically similar. Both phrases are talking about the same topic (the severity of a condition) and use similar words (5 out of 10). The common subset of information is the severity of the condition, and both phrases convey the same information. Therefore, the answer is ""@Similar@"".",
+"patient is a 53-year-old male with a past medical history significant for esophagitis, hepatitis c, hypertension, asthma, alcoholism, hiatal hernia s/p nissen fundoplication who was just seen at mercy emergency department yesterday for abdominal pain thought to be due to gastritis/esophagitis presenting to the er with a chief complaint of epigastric pain/chest pain that radiates to his bilateral shoulder blades and down into his abdomen as associated with nausea, vomiting, and difficulty breathing. stating that the pain has been ongoing for several days but significantly worsened today despite him trying protonix, carafate, zofran, and pepcid. patient stating his last vomiting was 3 days ago, but denies any dark tarry stools or blood in his stool. pt stating that his urine has been very dark. patient stating that he has had pain similar to this previously but this is just more severe. he denies any recent alcohol use and stating that he has only had several tablets of over-the-counter aspirin but no other nsaids.",nan,several days but significantly worsened today,Spurious,,
+"patient is an 34 years old female with past medical history of anxiety, depression, hidradenitis suppurative s/p extensive bilateral axillae surgery, presented with complain of chest pain. as per patient she has had intermittent right sided chest pain since yesterday night. she says her pain started acutely, is intermittent, 6/10 in intensity. she describes her pain as sharp, stabbing in character, with no radiation. there is no exacerbation with ambulation. denies shortness of breath, palpitations or lower extremity edema. patient does endorse that her pain gets worse when she takes shallow breaths, no relation with deep breaths or bending forward. denies recent surgery, immobilization or pregnancy.",6/10,since yesterday night,Similar,"<s>[INST]<<SYS>>
+
+You are a language model that is used for the evaluation of model 
+predictions against the ground truth. I will be providing you with two phrases and your task is to tell me
+if they are semantically similar or not. Please consider the meaning of words, the context in which they appear and any implied
+or explicit relationships between the phrases.
+
+Semantically similar phrases are phrases that describe the same event or action eventhough they dont use the exact same words.
+
+Specifically,
+a) The two phrases mean the same
+b) The common subset of information means the same
+
+Semantically dissimilar phrases are phrases that describe different events, actions, or concepts or if they differ
+significantly in meaning, context or intent. In other words, phrases that express unrelated or contradictory ideas, or 
+that have different connotations are considered semantically dissimilar.  
+
+Specifically,
+a) The two phrases do not mean the same:
+b) The common subset of information does not mean the same: 
+
+<</SYS>>
+
+Now I will provide you with examples and the reasoning steps for semantically similar phrases.
+
+Example1: Ground Truth: '24 hours ago' and Prediction: '1 day ago' 
+
+1) Identify common topic of information: Both phrases are talking about time.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: 24 hours ago 
+    Phrase2:  1 day ago 
+3) Evaluate the similarity of the two phrases: They mean the same as 24 hours ago and 1 day are the same time duration.
+4) Final answer: @Similar@
+
+
+Example2: Ground Truth: 'pain in left arm and shoulder' and Prediction: 'pain in left arm'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+Example3: Ground Truth: 'pain in the left arm and shoulder' and Prediction:  'pain in the left arm and left side of chest'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+
+I will provide you with ground truth and predictions and your task is to tell me if they are 
+'Similar', 'Dissimilar', 'Spurious' or 'Missing'. Answer '@Similar@', '@Dissimilar@', '@Spurious@', '@Missing@'.
+
+Text: Ground Truth: 6/10 
+ Prediction: since yesterday night 
+[/INST]  Sure, I'd be happy to help! Based on the information you've provided, here's my evaluation of the ground truth and prediction:
+
+Ground Truth: 6/10
+
+Prediction: since yesterday night
+
+1) Identify common topic of information: Both phrases are talking about time.
+2) Determine the respective piece of information supporting the common topic:
+    Ground Truth: 6/10 (specific date and time)
+    Prediction: since yesterday night (duration of time)
+3) Evaluate the similarity of the two phrases: They do not mean the same as the ground truth provides a specific date and time, while the prediction provides a duration of time.
+4) Final answer: @Dissimilar@
+
+So, the prediction ""since yesterday night"" is not semantically similar to the ground truth ""6/10"".",
+"patient is a 57-year-old female smoker with history of hypertension, gerd, peptic ulcer disease who comes to the emergency department with multiple complaints. she notes that she has been feeling unwell over the last 2 months. she was seen at a hospital in new york recently and has a ct of her abdomen and pelvis which showed multiple chronic findings of the patient was concerned about. they did recommend that she have her lfts monitored as she has some ductal dilatation. her lfts at that time were normal. she has been complaining of some mid abdominal pain for the last 2 months. she also complains of some fatigue and lightheadedness. she comes to the emergency department today as she had some chest pain which started last night. chest pain is intense pressure sensation in the center of her chest. patient states that her pain has never been this bad before. she has a family history of cad and has had stress tests in the past but notes that it has been several years since her last one. she is also complaining of some melena and has a history of peptic ulcer disease but is not currently on any medication and does not follow up with a gastroneurologist. she has not noticed any black or bloody stools today but did have some recently. she is also complaining of a worsening headache today and has a history of migraines.",nan, over the last 2 months,Spurious,,
+"patient is a 64-year-old male who comes to the emergency department complaining of chest pain. pain started last night and has been occurring intermittently since this time. pain is a substernal chest pressure which is worse with exertion. pain will radiate into his shoulder. he also notes some shortness of breath with the pain. patient notes that he has not experienced anything like this previously. he has had stress tests in the past but it has been several years since his last one. he has also not had a cardiac catheterization over the last several years. he denies any recent cough or uri symptoms. denies any recent pain or swelling of the extremities. denies any recent surgeries, hospitalizations or travel.",nan,last night,Spurious,,
+"58f, hx parox a-fib/on xeralto, anxiety, htn  c/o lt ant cp x 4-5 hrs  pt seen 3 month ago for the same w/ neg w/up  pt says her daughter will loose her pregnancy due to cong defect and she is stressed  exam: mild lt ant chest tenderness",nan,3 month ago,Spurious,,
+:   26-year-old man with history of sickle cell disease and pulmonary embolism on xarelto presents to the emergency department tonight for a chief complaint of chest pain. this chest pain started yesterday after he was in a motor vehicle accident. it is in the center of his chest and radiates diffusely throughout the chest. it is severe. he has been taking morphine and oxycodone by mouth at home with minimal improvement. it is not worsened with deep inspiration. no cough or shortness of breath. no fevers or chills.,nan,yesterday,Spurious,,
+":   80-year-old woman with a history of hypertension presents to emergency department today accompanied by her daughter with a chief complaint of chest pain. the pain started about 2-1/2 weeks ago. it is located in the right side of her chest and costal margin underneath her right breast, and it radiates towards her right back. it is sharp and worsens with coughing or taking a deep breath. it is currently a 2 or 3 out of 10 in severity, but a few days ago she had an episode of 10 out of 10 pain. she has had some associated increased productive cough compared to usual. no fevers or chills. no associated nausea or diaphoresis. no history of clots in her lungs or legs; no recent immobilization or hospitalization; no new leg swelling or pain.",2 or 3 out of 10,2 or 3 out of 10,Similar,,
+"patient is a 62-year-old male with a past medical history of coronary artery disease status post catheterization and stent placement in 2006, gerd, diabetes, and hypertension who presents with chest pain that began last night. patient was lying in bed when the pain began. patient states that the pain is a 6 out of 10 pressure-like pain located mid sternally and is nonradiating. there are no exacerbating or relieving factors, the pain is positional and is worse with lying down and improves with leaning forward. patient has been experiencing chills however has not taken his temperature. the patient admits shortness of breath associated with the pain and admits orthopnea. admits lightheadedness as well as nausea. denies emesis, abdominal pain, syncope, pnd, edema. patient had sloppy joes for dinner last night. patient had a similar episode of chest pain in september 2017. patient underwent a complete cardiovascular evaluation and at that time it was felt to be related to gerd. when patient was being worked up in the fall, it was noted that he had a dilated thoracic aneurysm measuring 4 cm in diameter.",6 out of 10,6 out of 10 pressure-like pain,Similar,"<s>[INST]<<SYS>>
+
+You are a language model that is used for the evaluation of model 
+predictions against the ground truth. I will be providing you with two phrases and your task is to tell me
+if they are semantically similar or not. Please consider the meaning of words, the context in which they appear and any implied
+or explicit relationships between the phrases.
+
+Semantically similar phrases are phrases that describe the same event or action eventhough they dont use the exact same words.
+
+Specifically,
+a) The two phrases mean the same
+b) The common subset of information means the same
+
+Semantically dissimilar phrases are phrases that describe different events, actions, or concepts or if they differ
+significantly in meaning, context or intent. In other words, phrases that express unrelated or contradictory ideas, or 
+that have different connotations are considered semantically dissimilar.  
+
+Specifically,
+a) The two phrases do not mean the same:
+b) The common subset of information does not mean the same: 
+
+<</SYS>>
+
+Now I will provide you with examples and the reasoning steps for semantically similar phrases.
+
+Example1: Ground Truth: '24 hours ago' and Prediction: '1 day ago' 
+
+1) Identify common topic of information: Both phrases are talking about time.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: 24 hours ago 
+    Phrase2:  1 day ago 
+3) Evaluate the similarity of the two phrases: They mean the same as 24 hours ago and 1 day are the same time duration.
+4) Final answer: @Similar@
+
+
+Example2: Ground Truth: 'pain in left arm and shoulder' and Prediction: 'pain in left arm'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+Example3: Ground Truth: 'pain in the left arm and shoulder' and Prediction:  'pain in the left arm and left side of chest'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+
+I will provide you with ground truth and predictions and your task is to tell me if they are 
+'Similar', 'Dissimilar', 'Spurious' or 'Missing'. Answer '@Similar@', '@Dissimilar@', '@Spurious@', '@Missing@'.
+
+Text: Ground Truth: 6 out of 10 
+ Prediction: 6 out of 10 pressure-like pain 
+[/INST]  Sure, I'm ready to help! Based on the information you've provided, here's my evaluation of the ground truth and prediction:
+
+Ground Truth: 6 out of 10
+Prediction: 6 out of 10 pressure-like pain
+
+1) Identify common topic of information: Both phrases are talking about pain, specifically pressure-like pain.
+2) Determine the respective piece of information supporting the common topic:
+    Ground Truth: 6 out of 10
+    Prediction: 6 out of 10 pressure-like pain
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention the same number of pressure-like pain.
+4) Final answer: @Similar@
+
+Therefore, the ground truth and prediction are semantically similar.",
+68-year-old female presenting for evaluation of intermittent substernal chest pressure radiating down the left arm with associated numbness and tingling. patient reports pain since yesterday. she is unable to get up any exacerbating or alleviating symptoms. she reports that the pain seems to intensify at random. it does not radiate to her back. it is not ripping or tearing or pleuritic. she denies any associated shortness of breath but does endorse nausea as well as diaphoresis. she denies any vomiting or abdominal pain. she denies any history of chest pain like this in the past. she states that the pain fluctuates between a 4-6/10. she has not taken anything for it. she presents here for further evaluation.,4-6/10,moderate,Similar,"<s>[INST]<<SYS>>
+
+You are a language model that is used for the evaluation of model 
+predictions against the ground truth. I will be providing you with two phrases and your task is to tell me
+if they are semantically similar or not. Please consider the meaning of words, the context in which they appear and any implied
+or explicit relationships between the phrases.
+
+Semantically similar phrases are phrases that describe the same event or action eventhough they dont use the exact same words.
+
+Specifically,
+a) The two phrases mean the same
+b) The common subset of information means the same
+
+Semantically dissimilar phrases are phrases that describe different events, actions, or concepts or if they differ
+significantly in meaning, context or intent. In other words, phrases that express unrelated or contradictory ideas, or 
+that have different connotations are considered semantically dissimilar.  
+
+Specifically,
+a) The two phrases do not mean the same:
+b) The common subset of information does not mean the same: 
+
+<</SYS>>
+
+Now I will provide you with examples and the reasoning steps for semantically similar phrases.
+
+Example1: Ground Truth: '24 hours ago' and Prediction: '1 day ago' 
+
+1) Identify common topic of information: Both phrases are talking about time.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: 24 hours ago 
+    Phrase2:  1 day ago 
+3) Evaluate the similarity of the two phrases: They mean the same as 24 hours ago and 1 day are the same time duration.
+4) Final answer: @Similar@
+
+
+Example2: Ground Truth: 'pain in left arm and shoulder' and Prediction: 'pain in left arm'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+Example3: Ground Truth: 'pain in the left arm and shoulder' and Prediction:  'pain in the left arm and left side of chest'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+
+I will provide you with ground truth and predictions and your task is to tell me if they are 
+'Similar', 'Dissimilar', 'Spurious' or 'Missing'. Answer '@Similar@', '@Dissimilar@', '@Spurious@', '@Missing@'.
+
+Text: Ground Truth: 4-6/10 
+ Prediction: moderate 
+[/INST]  Sure, I'm ready to help! Based on the information you've provided, I can evaluate the similarity between the ground truth and the prediction.
+
+In this case, the ground truth is ""4-6/10"" and the prediction is ""moderate.""
+
+1. Identify common topic of information: Both phrases are talking about the severity of a condition.
+2. Determine the respective piece of information supporting the common topic:
+	* Ground Truth: 4-6/10
+	* Prediction: moderate
+3. Evaluate the similarity of the two phrases: They do not mean the same as ""4-6/10"" and ""moderate"" are not the same level of severity. ""Moderate"" is a more general term that could encompass a range of severity levels, including ""4-6/10.""
+4. Final answer: @Dissimilar@
+
+Therefore, I conclude that the ground truth and the prediction are dissimilar.",
+"69 year old male with pmh significant for colon ca s/p partial colectomy with end colostomy, bilateral ureteral stents, htn, cad, s/p cabg, etoh abuse with withdrawal seizures, cva, pe, hypothyroidims, chronic pain on methadone, multiple myeloma presenting for evaluation of chest pain. patient reports substernal as well as left-sided chest pain days. he states that it is worse with exertion. it is not pleuritic. he denies any associated shortness breath. she denies any nausea, vomiting, or diarrhea. she denies any abdominal pain. she denies any diaphoresis in association with it. he states it is not responsive to his home pain medication. he states that it is 5 out of 10. he presents here for further evaluation.",5 out of 10,worse with exertion,Similar,"<s>[INST]<<SYS>>
+
+You are a language model that is used for the evaluation of model 
+predictions against the ground truth. I will be providing you with two phrases and your task is to tell me
+if they are semantically similar or not. Please consider the meaning of words, the context in which they appear and any implied
+or explicit relationships between the phrases.
+
+Semantically similar phrases are phrases that describe the same event or action eventhough they dont use the exact same words.
+
+Specifically,
+a) The two phrases mean the same
+b) The common subset of information means the same
+
+Semantically dissimilar phrases are phrases that describe different events, actions, or concepts or if they differ
+significantly in meaning, context or intent. In other words, phrases that express unrelated or contradictory ideas, or 
+that have different connotations are considered semantically dissimilar.  
+
+Specifically,
+a) The two phrases do not mean the same:
+b) The common subset of information does not mean the same: 
+
+<</SYS>>
+
+Now I will provide you with examples and the reasoning steps for semantically similar phrases.
+
+Example1: Ground Truth: '24 hours ago' and Prediction: '1 day ago' 
+
+1) Identify common topic of information: Both phrases are talking about time.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: 24 hours ago 
+    Phrase2:  1 day ago 
+3) Evaluate the similarity of the two phrases: They mean the same as 24 hours ago and 1 day are the same time duration.
+4) Final answer: @Similar@
+
+
+Example2: Ground Truth: 'pain in left arm and shoulder' and Prediction: 'pain in left arm'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+Example3: Ground Truth: 'pain in the left arm and shoulder' and Prediction:  'pain in the left arm and left side of chest'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+
+I will provide you with ground truth and predictions and your task is to tell me if they are 
+'Similar', 'Dissimilar', 'Spurious' or 'Missing'. Answer '@Similar@', '@Dissimilar@', '@Spurious@', '@Missing@'.
+
+Text: Ground Truth: 5 out of 10 
+ Prediction: worse with exertion 
+[/INST]  Sure, I'm ready to help! Based on the information you've provided, I can evaluate the ground truth and predictions and provide my answer.
+
+For the ground truth ""5 out of 10"" and the prediction ""worse with exertion"", I would say that they are not semantically similar. The ground truth is a specific number and the prediction is a statement about the severity of a condition. They do not express the same idea or information, so I would classify them as dissimilar.
+
+My answer is:@Dissimilar@.",
+51-year-old male that presents for chest pain. patient has had intermittent chest pain for 3 weeks. he says his pain is on the left chest. recently he was admitted to health s. rehabilitation ctr. because of injuries secondary to fall. patient reports dyspnea. his pain is worse with inspiration. he says this pain does not radiate he has no fever or cough. his no diaphoresis. his no vomiting. his no swelling or pain in his lower extremities. patient had a recent stress test which was negative for cardiac ischemic changes.,nan,nan,Similar,,
+66-year-old female presents for chest pain. patient has chest pain and bilateral arm numbness. she has had 2 cardiac cast to have been normal she reports. she has no fever or chills. his no dyspnea. her pain is substernal without fever or cough. there is no radiation to the back. no radiation into her neck. she has no nausea or vomiting or diaphoresis. does not also no swelling or pain to her lower extremity. reports that her pain is worse with inspiration.,nan,several days/hours ago,Spurious,,
+"patient is a 49yof with a pmhx of rca stent placed 8/22/18 who presents via ems with chest discomfort that started around 2pm today and has become gradually worse. the patient states that overnight she started to feel discomfort in her right shoulder, back, and arm. she states that she is feeling short of breath and has a headache. at home between 2-4pm today the patient states that she took 6 baby aspirins to alleviate her pain. she states that her pain did not alleviate. she was also provided with two nitro tabs via ems. the patient states that these gave her a headache. the patient denies any changes in pain with food, trauma, swelling in her body, or cough.",nan,overnight,Spurious,,
+"patient is a 61yom who presents s/p insect bite to his right leg 1 week ago. over the course of the last 3 days the patient has noticed increased swelling in his right foot. the patient states that the pain has gradually built up and characterizes it as a dull pain. he states he feels pain in his entire foot but the inital place where the pain began was laterally. he states that he is unable to walk on his foot. bending his toes and applying pressure to his feet make the pain worse. the pateint tried 800mg of ibuprofen to alleviate his pain but found no relief. the patient deneies any trauma, headaches, swelling anywhere else in his body, nausea, fevers, and rash.",nan,over the course of the last 3 days,Spurious,,
+patient had tick removed from left armpit on 1114 upon acute tick tested positive for lyme therefore patient started on doxycycline just took one dose so pcp few days ago diagnosed with cellulitis reports increased pain and swelling in his area denies fever chills,nan,""".
+
+Therefore, the extracted entity 'Severity' is """,Spurious,,
+patient had chest pain left side that precordial under the breast for 20 minutes this morning patient supposedly subsided she went to sleep has not had pain since he was sharp and nonradiating it is no diaphoresis no shortness of breath was at,nan,this morning,Spurious,,
+patient presents by a  for evaluation of right-sided chest wall pain. pain started yesterday. worse when she moves her right arm or coughs. patient discharged from this study 2 weeks ago after she was admitted for right-sided pneumonia and elevated troponin. patient states she has been doing well since. patient notes yesterday prior to going on the bed she developed pain in the right side of her chest had noted all day today when she moves her arm or coughs. currently symptom free. history of chronic respiratory failure oxygen-dependence wears bipap at night. denies shortness of breath. no abdominal pain. no fever. no nausea vomiting diarrhea. no other complaint.,nan,nan,Similar,,
+patient presents by ambulance with chest pain. patient received nitroglycerin and aspirin prehospital with improvement of pain. patient states that he developed midsternal chest pain at home tonight. patient states that he was discharged from butler memorial hospital earlier today after he was admitted to their facility for cabg. patient was seen at this facility last sunday where he was transferred to west penn hospital and had a heart cath for treatment of chest pain and non-stemi. patient states that his upmc insurance would not cover for stent placement so he was then transferred to butler memorial hospital where he had pci on thursday. patient reports after arriving home earlier today he was having some typical back pain and took his pain pill which relieved it and then this evening developed midsternal chest pain and called ambulance. when i went into evaluate patient and stated that pain and chest was gone. no shortness of breath or no lower extremities do appear patient was found to have low-grade fever 100.3. states he was coughing the other day but no coughing today. no abdominal pain. no nausea vomiting or diarrhea. denies urinary symptoms. patient also admits to fall and rib fracture on left side as well as chronic back pain states he takes oxycodone for treatment of chronic back pain is currently requesting medication for treatment of back pain. describes today's back pain is typical.,nan,today,Spurious,,
+"73 year old male history of afib, cad, chf, htn, copd presents with weakness and increased feeling of being tired starting 3 days ago and getting worse. patient was discharged from the hospital for pneumonia on 4/17 and feels like that has resolved. 4 days ago he felt fine, able to ambulate without difficulty, but the next day he states it feels like his legs would not hold him up. denies headache, chest pain, sob, nausea, vomiting, diarrhea, abdominal pain.",nan,3 days ago,Spurious,,
+"patient is a 73 yo african american female who presents to the ed today for complaint of right arm pain and upper right thoracic backpain and right anterior chest pain that started approximately 30-45min ago it was initally 10/10 on vnrs and was going to call ems but started to subside after 10-15 min and states now a 2/10 on vnrs. he denies radiation to jaw. denies sob, chest pain, abdominal pain, n/v, sweating. he had recent adimission 10/29-10/30 for lap appy he never followed up after d/c he states he kept missing the appointment. he states that he had pain like this several months ago and when he followed up with his doctor they did an ekg and told him that he had a heart attack. he does not know if he was told to follow up with cardiology but he does not think that he ever has seen a cardiologist. he is currently on suboxone and states that he is seen at his pcp dr. harvery shipkovitz every tuesday he states he has been clean for 12-15 years. he is prescribed enalapril/hctz by his pcp and had stopped taking it 2 years ago on his own and then 3 days ago he tried to take it again but didn't like the way it made him felt so he stopped. he smokes one pack of cigarettes per day.",10/10,"""",Similar,"<s>[INST]<<SYS>>
+
+You are a language model that is used for the evaluation of model 
+predictions against the ground truth. I will be providing you with two phrases and your task is to tell me
+if they are semantically similar or not. Please consider the meaning of words, the context in which they appear and any implied
+or explicit relationships between the phrases.
+
+Semantically similar phrases are phrases that describe the same event or action eventhough they dont use the exact same words.
+
+Specifically,
+a) The two phrases mean the same
+b) The common subset of information means the same
+
+Semantically dissimilar phrases are phrases that describe different events, actions, or concepts or if they differ
+significantly in meaning, context or intent. In other words, phrases that express unrelated or contradictory ideas, or 
+that have different connotations are considered semantically dissimilar.  
+
+Specifically,
+a) The two phrases do not mean the same:
+b) The common subset of information does not mean the same: 
+
+<</SYS>>
+
+Now I will provide you with examples and the reasoning steps for semantically similar phrases.
+
+Example1: Ground Truth: '24 hours ago' and Prediction: '1 day ago' 
+
+1) Identify common topic of information: Both phrases are talking about time.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: 24 hours ago 
+    Phrase2:  1 day ago 
+3) Evaluate the similarity of the two phrases: They mean the same as 24 hours ago and 1 day are the same time duration.
+4) Final answer: @Similar@
+
+
+Example2: Ground Truth: 'pain in left arm and shoulder' and Prediction: 'pain in left arm'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+Example3: Ground Truth: 'pain in the left arm and shoulder' and Prediction:  'pain in the left arm and left side of chest'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+
+I will provide you with ground truth and predictions and your task is to tell me if they are 
+'Similar', 'Dissimilar', 'Spurious' or 'Missing'. Answer '@Similar@', '@Dissimilar@', '@Spurious@', '@Missing@'.
+
+Text: Ground Truth: 10/10 
+ Prediction: "" 
+[/INST]  Sure, I'm ready to help! Please provide the ground truth and the prediction, and I'll evaluate them based on the criteria you've outlined.",
+"pt c/o intermittent chest pains under l breast for 2-4 weeks. no sob, nausea, palpitations, diaphoresis. pain is nonexertional, nonradiating and nonpleuritic. no fevers, chils, cough. no leg pain or swelling. he recently moved here, has no pcp yet, thought it was time to get evaluated. he has not had any chest pains at all today",nan,for 2-4 weeks,Spurious,,
+"pt c/o intermittent chest discomfort for about 3 months. it seems to occur at random. it is nonexertional, nonradiating and nonpleuritic. when it occurs she says she gets very anxious, starts to feel like her heart is going to beat out of her chest, gets sob and palpitations, then settles down on its own. she has h/o hiatal hernia which gives her pressure in her epigastric regoing but she says this feels different. she is on prevacid but has not tried any antacids prn on top of that. at present she is asymptomatic",nan,about 3 months ago,Spurious,,
+"pt with h/o cad presents for eval of chet pressure radiating to his jaw constantly for 5 days. also has doe. says he called his cardiologt and was told to come ehre. arriveas in no distress, hd stable. ekg showing nsr without acute ischemia or infarction. his last cardiac catheter was in february 2014 revealing patent grafts to lad, diagonal om and pda. last echocardiogram january 2015 revealing normal lvef evidence of vascular dysfunction. last stress test may 2016 no change",nan,.,Spurious,,
+"this is a 43 year old m who came to the ed with sob and chest pain. pt started feeling unwell about a week ago when he began feeling feverish, vomiting nb/nb and diarrhea without melena or hematochezia. at the beginning of the week he was also having a headache and nasal congestion that has resolved. however, the coughing, sob and chest pain all remain. the cough is productive clear sputum. chest pain is on the upper left side that is non-radiating, sharp and worsened with inspiration. the pt is no longer vomiting or having diarrhea. pt denies any dysphagia or odynophagia, no myalglias. pt reports that his headache has resolved, but he feels lightheaded. pt has needed to use his inhaler at home more frequently for his wheezing. pt denies any recent sick contacts.",nan,at the beginning of the week,Spurious,,
+57 caucasian male presents emergency department for evaluation of abrupt onset left chest pain nonradicular by description specifically no back pain and/or extremity complaints reported history of aneurysm of the aortic arch no associated episodes of diaphoresis nausea vomiting unaware palpitations essentially at rest with left upper chest as stated no recent injury or illness states had a cardiac catheterization within the past week to week and a half and states only information was given is that he will need a pacemaker however this was not arranged at this point the catheterization was performed an outlying facility and reports of which are not readily available states hr from 40's to 140's,nan,"abrupt onset"".
+
+Therefore, the entity 'Severity' can be extracted as """,Spurious,,
+38 caucasian female reported history of lupus as well as recurrent bouts of pleuritis presents emergency department for evaluation of constant sharp chest pain on discrete and so far as location no identified ameliorating or exacerbating factors does has a cough which is nonproductive and has no exertional intolerance no identified ill exposures states most concerning for her as a number of days of noticed ankle edema with no reported dietary changes shortness of breath orthopnea etc. and reportedly has a history of renal failure and her family which is what was concerning for her no outpatient lab testing or evaluation ordered or performed,nan,constant sharp chest pain,Spurious,,
+"the pt presents with 3 weeks of intermittent midsternal chest pain with the latest episode this afternoon. she denies nausea, diaphoresis or sob. + dizziness. her family member states that she had similar symptoms prior to receiving 3 stents in september. he reports that she was scheduled for a 4th, but has not yet had is performed.",nan,3 weeks ago,Spurious,,
+patient presents with chest pain that started 5 days ago. he states that he always has chest pain at baseline but on monday the pain worsened. he thinks he may have been taking out the trash at the time. he reports some mild dizziness at the onset of the worsening pain. he reports intermittent shortness of breath and sweats. he states that the pain radiates into his left arm and left neck. he has a history of 3 stents and his last cardiac catheter was 2 years ago.,nan,5 days ago,Spurious,,
+"patient is a 65 years old female with history of asthma, a. fib, hypertension, morbid obesity-bedbound, chf, pvd, diabetes mellitus type 2, home oxygen, who comes in complaining of chest pain. patient reports that hour ago which was awake laying in bed she had cramping/chest tightness in the midst sternal area, 10 over 10, associated to shortness of breath, nonradiating, that lasted for 30 minutes. dr. reports that patient has been having worsening of her baseline shortness of breath and bilateral lower extremities edema for the past 2 weeks.",10 over 10,hour ago,Similar,"<s>[INST]<<SYS>>
+
+You are a language model that is used for the evaluation of model 
+predictions against the ground truth. I will be providing you with two phrases and your task is to tell me
+if they are semantically similar or not. Please consider the meaning of words, the context in which they appear and any implied
+or explicit relationships between the phrases.
+
+Semantically similar phrases are phrases that describe the same event or action eventhough they dont use the exact same words.
+
+Specifically,
+a) The two phrases mean the same
+b) The common subset of information means the same
+
+Semantically dissimilar phrases are phrases that describe different events, actions, or concepts or if they differ
+significantly in meaning, context or intent. In other words, phrases that express unrelated or contradictory ideas, or 
+that have different connotations are considered semantically dissimilar.  
+
+Specifically,
+a) The two phrases do not mean the same:
+b) The common subset of information does not mean the same: 
+
+<</SYS>>
+
+Now I will provide you with examples and the reasoning steps for semantically similar phrases.
+
+Example1: Ground Truth: '24 hours ago' and Prediction: '1 day ago' 
+
+1) Identify common topic of information: Both phrases are talking about time.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: 24 hours ago 
+    Phrase2:  1 day ago 
+3) Evaluate the similarity of the two phrases: They mean the same as 24 hours ago and 1 day are the same time duration.
+4) Final answer: @Similar@
+
+
+Example2: Ground Truth: 'pain in left arm and shoulder' and Prediction: 'pain in left arm'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+Example3: Ground Truth: 'pain in the left arm and shoulder' and Prediction:  'pain in the left arm and left side of chest'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+
+I will provide you with ground truth and predictions and your task is to tell me if they are 
+'Similar', 'Dissimilar', 'Spurious' or 'Missing'. Answer '@Similar@', '@Dissimilar@', '@Spurious@', '@Missing@'.
+
+Text: Ground Truth: 10 over 10 
+ Prediction: hour ago 
+[/INST]  Sure, I'm ready to help! Based on the information you've provided, I can evaluate the similarity between the ground truth and the prediction.
+
+Ground Truth: 10 over 10
+Prediction: hour ago
+
+1. Identify common topic of information: Both phrases are talking about time.
+2. Determine the respective piece of information supporting the common topic:
+	Ground Truth: 10 over 10 (time period)
+	Prediction: hour ago (time period)
+3. Evaluate the similarity of the two phrases: They mean the same as both phrases are describing the same time period (10 over 10 is equivalent to an hour ago).
+4. Final answer: @Similar@",
+"patient is a 52-year-old male with history of mi who comes in complaining of chest pain. patient reports that he has been having cough for the past 2 months, that yesterday at 11:30 a.m. was associated with midsternal tightness when he was going to bed, and then with sharp stabbing. the pain is 9/10 in intensity, in the middle of his back, intermittent, with each episode lasting 1 minute, and occasionally radiating to his left arm. the chest discomfort is located on his midsternal chest and occasionally radiates to his left chest. associated with the chest discomfort patient reports shortness of breath with the pain. patient does have cardiologist at this time. patient denies any diaphoresis or nausea, abdominal pain, fever, or any other symptoms. patient is a heavy smoker.",9/10,yesterday at 11:30 a.m.,Similar,"<s>[INST]<<SYS>>
+
+You are a language model that is used for the evaluation of model 
+predictions against the ground truth. I will be providing you with two phrases and your task is to tell me
+if they are semantically similar or not. Please consider the meaning of words, the context in which they appear and any implied
+or explicit relationships between the phrases.
+
+Semantically similar phrases are phrases that describe the same event or action eventhough they dont use the exact same words.
+
+Specifically,
+a) The two phrases mean the same
+b) The common subset of information means the same
+
+Semantically dissimilar phrases are phrases that describe different events, actions, or concepts or if they differ
+significantly in meaning, context or intent. In other words, phrases that express unrelated or contradictory ideas, or 
+that have different connotations are considered semantically dissimilar.  
+
+Specifically,
+a) The two phrases do not mean the same:
+b) The common subset of information does not mean the same: 
+
+<</SYS>>
+
+Now I will provide you with examples and the reasoning steps for semantically similar phrases.
+
+Example1: Ground Truth: '24 hours ago' and Prediction: '1 day ago' 
+
+1) Identify common topic of information: Both phrases are talking about time.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: 24 hours ago 
+    Phrase2:  1 day ago 
+3) Evaluate the similarity of the two phrases: They mean the same as 24 hours ago and 1 day are the same time duration.
+4) Final answer: @Similar@
+
+
+Example2: Ground Truth: 'pain in left arm and shoulder' and Prediction: 'pain in left arm'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+Example3: Ground Truth: 'pain in the left arm and shoulder' and Prediction:  'pain in the left arm and left side of chest'
+
+1) Identify common topic of information: Both phrases are talking about pain in the arm.
+2) Determine the respective piece of information supporting the common topic:
+    Phrase1: pain in left arm
+    Phrase2:  pain in left arm
+3) Evaluate the similarity of the two phrases: They mean the same as both phrases mention that pain is in left arm.
+4) Final answer: @Similar@
+
+
+I will provide you with ground truth and predictions and your task is to tell me if they are 
+'Similar', 'Dissimilar', 'Spurious' or 'Missing'. Answer '@Similar@', '@Dissimilar@', '@Spurious@', '@Missing@'.
+
+Text: Ground Truth: 9/10 
+ Prediction: yesterday at 11:30 a.m. 
+[/INST]  Sure, I'd be happy to help! Based on the information you've provided, I would classify the ground truth ""9/10"" and the prediction ""yesterday at 11:30 a.m."" as follows:
+
+@Dissimilar@
+
+The ground truth ""9/10"" is a numerical value representing a score or rating, while the prediction ""yesterday at 11:30 a.m."" is a time and date. These two pieces of information do not have the same meaning or context, so they are not semantically similar.",
+"70-year-old female history of glaucoma, hyperlipidemia, gerd presents with multiple complaints.  patient states that she was at work 1 week ago, when a student inadvertently struck the back of her left leg with a cart, causing her some discomfort about her left lateral ankle. later that day she tripped while getting out of her car, falling forward onto outstretched hands and onto her bilateral knees. she had several days of anterior knee pain, which has since resolved, does not endorse wrist pain. however, since this event, she has been experiencing midsternal and left-sided chest pain radiating towards her left shoulder. the pain is sharp, constant, and exacerbated with left arm movements and certain positions, and wearing a bra. tylenol seems to help this pain. pain is mild to moderate, is reproduced with pressure applied to the chest. denies cough, shortness of breath, diaphoresis, paresthesias. denies recent immobilization or asymmetrical calf swelling or pain. just states several days ago she was carrying a case of 24 bottles of water, and lifted this and moved this several times, which seemed to really exacerbate her chest pain. of note, her other had coronary artery disease with a quadruple bypass, later in life.  patient also states for the past 2 weeks or so she has been experiencing some lightheadedness with bending forward, specifically with tying her shoes. she has not otherwise been experiencing dizziness and has not experienced vertigo. no episodes of syncope or presyncope. no fevers or chills, nausea or vomiting, diarrhea.",nan,several days ago,Spurious,,
+"patient is a 58 yo female with significant past medical hx of cardiac issues, hypertension, diabetes and neuroapthy presenting to the dem with chest pain and sob since this morning. patient states that she was sitting in a chair this morning when she had intense sharp pain to her chest, it then went away and she walked to bus. on her way to the bus she experienced the pain again and had to stop walking. she now says she feels like something is sitting on her chest. she replies that it was intermitent at first and is now constant. she states she feels tingling in her finger tips, but this is baseline from her neuropathy. she states that this has happened previously and had formal workup of stress test and was sent to the cath lab where she reports everything was normal. she reports that she has not had a follow-up appointment with cardiologist in over a year. she denies nausea, vomitting, fever or chills.",nan,this morning,Spurious,,
+"patient is a 64-year-old female with history of emphysema presenting to the emergency department with shortness of breath, rash and posterior neck pain. patient states that she has a rash on her arms and legs that is itching/painful and feels like she was bit by mosquitoes 3 days ago. patient also states that her posterior neck pain has been present for months, but is increasing in pain. she denies any recent trauma. patient states she has been told that it is a fatty mass and nothing can be done to treat it. patient also reports shortness of breath and feels like her chest is being squeezed on the sides. patient states she was treated with prednisone for this in the past with relief. patient denies any nausea, vomiting, fever or chills.",nan,"' tags as requested:
+
+",Spurious,,
+"65-year-old male presenting with chest tightness. patient states that he had an episode of intermittent chest tightness recently and was evaluated 2 days ago in ed. he states that he was told that the workup was unremarkable but he should have pcp follow-up. patient states that since discharge from the ed he has felt well with no episodes of the symptoms. however he states that this afternoon at approximately 2 pm he began to have the chest tightness again. he describes an anterior chest tightness with no radiation, no exacerbating or remitting factors, moderate in severity. patient states he feels somewhat short of breath with exertion but denies any orthopnea or cough. patient states he has a mild frontal headache with some lightheadedness with the chest tightness as well. he denies any recent headaches, falls or trauma. he denies any recent heavy lifting. no abdominal pain or nausea/vomiting/diarrhea.",nan,recently,Spurious,,
+"patient states at approximately 7:30 this evening he began to have a sudden onset of chest pain while at rest. patient describes a left-sided chest heaviness, moderate in severity, radiating to the left arm, no exacerbating or remitting factors. patient states he feels slightly short of breath at onset as well as nauseous with no vomiting. patient states shortly after onset of pain he took 324 mg of aspirin. patient denies any recent dyspnea on exertion, no orthopnea or cough. denies any fevers, no recent vomiting or diarrhea. patient denies abdominal pain. no recent heavy lifting or traumatic events.",nan,moderate in severity,Spurious,,
+"gi: patient denies abdominal pain, nausea or vomiting  gu: patient denies dysuria, hematuria   msk: patient denies rash, edema about the arms/legs  endo: patient denies hot/cold intolerance  neuro: patient denies lh, dizziness, numbness/tingling and weakness",nan, ,Similar,,
+"cvs: per   gi: per    gu: patient denies dysuria, hematuria   msk: patient denies rash, edema about the arms/legs  endo: patient denies hot/cold intolerance  neuro: patient denies lh, dizziness, numbness/tingling and weakness",nan,nan,Similar,,
+patient resents emergency department complaining of sharp stabbing chest pain for the last year. patient states that she has a history of costochondritis and states that it might gotten worse this morning. patient states she's been pushing pulling heavy objects for the last 4-5 days.,nan,"this morning"" to indicate the start of the chief complaint.
+
+So, the final answer is:
+
+",Spurious,,
+patient presents the emergency department due to a fall yesterday where she fell landing on her buttocks and states that she feels that her lower back and pelvis has been jarred and is painful. she denies drug or head or lose consciousness. patient denies chest pain or shortness of breath. patient does not complain of any neck pain. patient states that she has pain to her lower ribs and her lower back. he should states pain is dull and states that movement affects the discomfort.,nan,yesterday,Spurious,,
+:   is a 53-year-old male with past medical history significant for atrial flutter status post ablation in the procedure yesterday. the patient was placed on hospice. he comes in today because approximately noon he had a vague sensation of chest discomfort where he felt as though he needed to burp. he notes his symptoms lasted for an hour and resolved. he denies associated symptoms.,nan, ,Similar,,
+"medications: as noted in the nursing record, have reviewed and agree",nan,""".
+
+So, the extracted entity 'Severity' is """,Spurious,,
+"this is a 59-year-old male with history of cad status post cabg and pci most recently in april 2018, poorly controlled htn, osa, and chronic back pain, who presents from cardiac rehabilitation with chief complaint chest pain. patient ascribes pain as a sharp stabbing needle in the center left side of his chest. reports that pain has progressively changed over the last 2 hours to more of a vague achy sensation. he reports initially was associated with some shortness of breath and diaphoresis, and nausea. the symptoms have since resolved. denies exacerbating or relieving symptoms. denies any radiation. does report that he has had chronic issues with lower extremity swelling but this is about at baseline. no other cough or fevers. does report some vague abdominal discomfort at this time but denies any abdominal pain per se.  pmh: as above  social history: denies tobacco",nan,over the last 2 hours,Spurious,,
